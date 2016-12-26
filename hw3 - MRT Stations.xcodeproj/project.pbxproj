@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		184EB9921E10CFE200E8C5F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EB9911E10CFE200E8C5F5 /* AppDelegate.swift */; };
-		184EB9941E10CFE200E8C5F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EB9931E10CFE200E8C5F5 /* ViewController.swift */; };
 		184EB9971E10CFE200E8C5F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184EB9951E10CFE200E8C5F5 /* Main.storyboard */; };
-		184EB99A1E10CFE200E8C5F5 /* hw3___MRT_Stations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 184EB9981E10CFE200E8C5F5 /* hw3___MRT_Stations.xcdatamodeld */; };
 		184EB99C1E10CFE200E8C5F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184EB99B1E10CFE200E8C5F5 /* Assets.xcassets */; };
 		184EB99F1E10CFE200E8C5F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184EB99D1E10CFE200E8C5F5 /* LaunchScreen.storyboard */; };
+		184EB9A91E10D6DE00E8C5F5 /* MRT.json in Resources */ = {isa = PBXBuildFile; fileRef = 184EB9A71E10D6DE00E8C5F5 /* MRT.json */; };
+		184EB9AB1E10E87600E8C5F5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EB9AA1E10E87600E8C5F5 /* TableViewController.swift */; };
+		184EB9AD1E1124FC00E8C5F5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EB9AC1E1124FC00E8C5F5 /* TableViewCell.swift */; };
+		184EB9AF1E1138D200E8C5F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EB9AE1E1138D200E8C5F5 /* ViewController.swift */; };
+		C3376F4BEEEA051F086EC3D3 /* Pods_hw3___MRT_Stations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F3C19A2A88FFF30549A7AE /* Pods_hw3___MRT_Stations.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		184EB98E1E10CFE200E8C5F5 /* hw3 - MRT Stations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hw3 - MRT Stations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		184EB9911E10CFE200E8C5F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		184EB9931E10CFE200E8C5F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		184EB9961E10CFE200E8C5F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		184EB9991E10CFE200E8C5F5 /* hw3___MRT_Stations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "hw3___MRT_Stations.xcdatamodel"; sourceTree = "<group>"; };
 		184EB99B1E10CFE200E8C5F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184EB99E1E10CFE200E8C5F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		184EB9A01E10CFE200E8C5F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184EB9A71E10D6DE00E8C5F5 /* MRT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MRT.json; sourceTree = "<group>"; };
+		184EB9AA1E10E87600E8C5F5 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		184EB9AC1E1124FC00E8C5F5 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		184EB9AE1E1138D200E8C5F5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		40F3C19A2A88FFF30549A7AE /* Pods_hw3___MRT_Stations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_hw3___MRT_Stations.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F1F6D6A0A2E95C18CE5B6D /* Pods-hw3 - MRT Stations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hw3 - MRT Stations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hw3 - MRT Stations/Pods-hw3 - MRT Stations.debug.xcconfig"; sourceTree = "<group>"; };
+		E182FCD4D7111291EA998FC3 /* Pods-hw3 - MRT Stations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hw3 - MRT Stations.release.xcconfig"; path = "Pods/Target Support Files/Pods-hw3 - MRT Stations/Pods-hw3 - MRT Stations.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3376F4BEEEA051F086EC3D3 /* Pods_hw3___MRT_Stations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				184EB9901E10CFE200E8C5F5 /* hw3 - MRT Stations */,
 				184EB98F1E10CFE200E8C5F5 /* Products */,
+				F4490225202E0620EBBA4D0E /* Pods */,
+				5985CD6496C526B4D9976A01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +68,33 @@
 			isa = PBXGroup;
 			children = (
 				184EB9911E10CFE200E8C5F5 /* AppDelegate.swift */,
-				184EB9931E10CFE200E8C5F5 /* ViewController.swift */,
+				184EB9AA1E10E87600E8C5F5 /* TableViewController.swift */,
+				184EB9AE1E1138D200E8C5F5 /* ViewController.swift */,
+				184EB9AC1E1124FC00E8C5F5 /* TableViewCell.swift */,
+				184EB9A71E10D6DE00E8C5F5 /* MRT.json */,
 				184EB9951E10CFE200E8C5F5 /* Main.storyboard */,
 				184EB99B1E10CFE200E8C5F5 /* Assets.xcassets */,
 				184EB99D1E10CFE200E8C5F5 /* LaunchScreen.storyboard */,
 				184EB9A01E10CFE200E8C5F5 /* Info.plist */,
-				184EB9981E10CFE200E8C5F5 /* hw3___MRT_Stations.xcdatamodeld */,
 			);
 			path = "hw3 - MRT Stations";
+			sourceTree = "<group>";
+		};
+		5985CD6496C526B4D9976A01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40F3C19A2A88FFF30549A7AE /* Pods_hw3___MRT_Stations.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4490225202E0620EBBA4D0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90F1F6D6A0A2E95C18CE5B6D /* Pods-hw3 - MRT Stations.debug.xcconfig */,
+				E182FCD4D7111291EA998FC3 /* Pods-hw3 - MRT Stations.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 184EB9A31E10CFE200E8C5F5 /* Build configuration list for PBXNativeTarget "hw3 - MRT Stations" */;
 			buildPhases = (
+				14D88E9B6B61CDF700579746 /* [CP] Check Pods Manifest.lock */,
 				184EB98A1E10CFE200E8C5F5 /* Sources */,
 				184EB98B1E10CFE200E8C5F5 /* Frameworks */,
 				184EB98C1E10CFE200E8C5F5 /* Resources */,
+				8F6C1CC9C3EFDCF758D80734 /* [CP] Embed Pods Frameworks */,
+				7552F4E247A49E0D5221CA7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,19 +162,69 @@
 				184EB99F1E10CFE200E8C5F5 /* LaunchScreen.storyboard in Resources */,
 				184EB99C1E10CFE200E8C5F5 /* Assets.xcassets in Resources */,
 				184EB9971E10CFE200E8C5F5 /* Main.storyboard in Resources */,
+				184EB9A91E10D6DE00E8C5F5 /* MRT.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14D88E9B6B61CDF700579746 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7552F4E247A49E0D5221CA7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hw3 - MRT Stations/Pods-hw3 - MRT Stations-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F6C1CC9C3EFDCF758D80734 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hw3 - MRT Stations/Pods-hw3 - MRT Stations-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		184EB98A1E10CFE200E8C5F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184EB99A1E10CFE200E8C5F5 /* hw3___MRT_Stations.xcdatamodeld in Sources */,
-				184EB9941E10CFE200E8C5F5 /* ViewController.swift in Sources */,
+				184EB9AD1E1124FC00E8C5F5 /* TableViewCell.swift in Sources */,
 				184EB9921E10CFE200E8C5F5 /* AppDelegate.swift in Sources */,
+				184EB9AF1E1138D200E8C5F5 /* ViewController.swift in Sources */,
+				184EB9AB1E10E87600E8C5F5 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +345,7 @@
 		};
 		184EB9A41E10CFE200E8C5F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90F1F6D6A0A2E95C18CE5B6D /* Pods-hw3 - MRT Stations.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "hw3 - MRT Stations/Info.plist";
@@ -274,6 +358,7 @@
 		};
 		184EB9A51E10CFE200E8C5F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E182FCD4D7111291EA998FC3 /* Pods-hw3 - MRT Stations.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "hw3 - MRT Stations/Info.plist";
@@ -303,21 +388,9 @@
 				184EB9A51E10CFE200E8C5F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		184EB9981E10CFE200E8C5F5 /* hw3___MRT_Stations.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				184EB9991E10CFE200E8C5F5 /* hw3___MRT_Stations.xcdatamodel */,
-			);
-			currentVersion = 184EB9991E10CFE200E8C5F5 /* hw3___MRT_Stations.xcdatamodel */;
-			path = "hw3___MRT_Stations.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 184EB9861E10CFE200E8C5F5 /* Project object */;
 }

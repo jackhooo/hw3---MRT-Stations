@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "184EB98D1E10CFE200E8C5F5"
-               BuildableName = "hw3 - MRT Stations.app"
-               BlueprintName = "hw3 - MRT Stations"
-               ReferencedContainer = "container:hw3 - MRT Stations.xcodeproj">
+               BlueprintIdentifier = "90672C1F9368723F12C0977807EA1EEC"
+               BuildableName = "Pods_hw3___MRT_Stations.framework"
+               BlueprintName = "Pods-hw3 - MRT Stations"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "184EB98D1E10CFE200E8C5F5"
-            BuildableName = "hw3 - MRT Stations.app"
-            BlueprintName = "hw3 - MRT Stations"
-            ReferencedContainer = "container:hw3 - MRT Stations.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "184EB98D1E10CFE200E8C5F5"
-            BuildableName = "hw3 - MRT Stations.app"
-            BlueprintName = "hw3 - MRT Stations"
-            ReferencedContainer = "container:hw3 - MRT Stations.xcodeproj">
+            BlueprintIdentifier = "90672C1F9368723F12C0977807EA1EEC"
+            BuildableName = "Pods_hw3___MRT_Stations.framework"
+            BlueprintName = "Pods-hw3 - MRT Stations"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "184EB98D1E10CFE200E8C5F5"
-            BuildableName = "hw3 - MRT Stations.app"
-            BlueprintName = "hw3 - MRT Stations"
-            ReferencedContainer = "container:hw3 - MRT Stations.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
