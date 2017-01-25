@@ -22,6 +22,12 @@ class TableViewController: UITableViewController {
         "貓空纜車":[119, 185, 51],
         ]
     
+    var MRTSection = ["文湖線","松山新店線","淡水信義線","新北投支線","小碧潭支線","中和新蘆線","板南線","貓空纜車"]
+    
+    var MRTStationNum:[[Int]]! = [
+        [0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]
+    ]
+    
     func readJason() -> JSON{
         
         if let path = Bundle.main.path(forResource: "MRT", ofType: "json") {
@@ -54,30 +60,66 @@ class TableViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return MRTSection.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return readJason().count
+        
+        let jasonData = readJason()
+        
+        var sum = 0
+        
+        for num in 0..<jasonData.count{
+            
+            if(jasonData[num]["lines"].dictionaryValue.keys.first == MRTSection[section])
+            {
+                MRTStationNum[num][0] = section
+                MRTStationNum[num][1] = sum
+                sum += 1
+            }
+        }
+        
+        return sum
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        return MRTSection[section]
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        
+        var cellNum = 0
+        
+        for station in 0..<MRTStationNum.count{
+            
+            if(MRTStationNum[station][0] == indexPath.section)
+            {
+                if(MRTStationNum[station][1] == indexPath.row)
+                {
+                    cellNum = station
+                    
+                    break
+                }
+            }
+        }
         
         // Configure the cell...
         
         let jasonData = readJason()
         
-        cell.stationName.text = jasonData[(indexPath as NSIndexPath).row]["name"].stringValue
+        cell.stationName.text = jasonData[cellNum]["name"].stringValue
         
-        if(jasonData[(indexPath as NSIndexPath).row]["lines"].dictionaryValue.count == 2 )
+        if(jasonData[cellNum]["lines"].dictionaryValue.count == 2 )
         {
             var c = 0
             
-            for name in jasonData[(indexPath as NSIndexPath).row]["lines"].dictionaryValue.keys{
+            for name in jasonData[cellNum]["lines"].dictionaryValue.keys{
                 if(c==0){
-                    cell.lineName1.text = jasonData[(indexPath as NSIndexPath).row]["lines"].dictionaryValue[name]?.stringValue
+                    cell.lineName1.text = jasonData[cellNum]["lines"].dictionaryValue[name]?.stringValue
                     cell.lineName1.textColor = UIColor.white
                     c+=1
                     let a = (mrtLine[name]?[0])!/255
@@ -86,7 +128,7 @@ class TableViewController: UITableViewController {
                     cell.lineName1.backgroundColor = UIColor(red: CGFloat(Double(a)), green: CGFloat(Double(b)), blue: CGFloat(Double(c)), alpha: 1.0)
                 }
                 else{
-                    cell.lineName2.text = jasonData[(indexPath as NSIndexPath).row]["lines"].dictionaryValue[name]?.stringValue
+                    cell.lineName2.text = jasonData[cellNum]["lines"].dictionaryValue[name]?.stringValue
                     cell.lineName2.textColor = UIColor.white
                     c=0
                     let a = (mrtLine[name]?[0])!/255
@@ -98,11 +140,11 @@ class TableViewController: UITableViewController {
         }
         else
         {
-            cell.lineName1.text = jasonData[(indexPath as NSIndexPath).row]["lines"].dictionaryValue.values.first?.stringValue
+            cell.lineName1.text = jasonData[cellNum]["lines"].dictionaryValue.values.first?.stringValue
             cell.lineName1.textColor = UIColor.white
             cell.lineName2.text = ""
             cell.lineName2.backgroundColor = UIColor.white
-            let name =  jasonData[(indexPath as NSIndexPath).row]["lines"].dictionaryValue.keys.first
+            let name =  jasonData[cellNum]["lines"].dictionaryValue.keys.first
             let a = (mrtLine[name!]?[0])!/255
             let b = (mrtLine[name!]?[1])!/255
             let c = (mrtLine[name!]?[2])!/255
@@ -112,15 +154,8 @@ class TableViewController: UITableViewController {
         return cell
     }
     
-    //    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    //
-    //        return
-    //    }
-    
-    
     // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let jasonData = readJason()
@@ -154,7 +189,6 @@ class TableViewController: UITableViewController {
                             destinationController.color2 = UIColor(red: CGFloat(Double(a)), green: CGFloat(Double(b)), blue: CGFloat(Double(c)), alpha: 1.0)
                         }
                     }
-
                 }
                 else
                 {
@@ -167,8 +201,6 @@ class TableViewController: UITableViewController {
                     destinationController.color1 = UIColor(red: CGFloat(Double(a)), green: CGFloat(Double(b)), blue: CGFloat(Double(c)), alpha: 1.0)
                     destinationController.color2 = UIColor.white
                 }
-                
-                
             }
         }
         else
